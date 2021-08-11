@@ -21,3 +21,5 @@ menuBtn.addEventListener('click', function(){
 $('[data-fancybox="gallery"]').fancybox({
   loop: true
 });
+
+

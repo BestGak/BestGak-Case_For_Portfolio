@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
@@ -89,7 +90,7 @@
   <section class="photossesion">
     <div class="photossesion__container">
       <h2 class="photossesion__container-title">Фотосессии</h2>
-      <div class="photossesion__container-grid">
+      <div class="photossesion__container-grid" id="containerGrid">
         <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid1.jpg" alt="firstImageGalery">
         <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid2.jpg" alt="seconImageGalery">
         <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid3.jpg" alt="thirdImageGalery">
@@ -170,9 +171,9 @@
      <a href="tel:0632589730">0632589730</a>
      <a href="mailto:anriplh@gmail.com">anriplh@gmail.com</a>
       <div class="footer__container-contact-social">
-        <a target="__blanc" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/?lang=ru" target="__blanc"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/gold_lepricon" target="__blanc"><i class="fab fa-instagram-square"></i></a>
+        <a target="__blanc" href="https://www.facebook.com/"><i class="fab fa-facebook-f footer_icon"></i></a>
+        <a href="https://twitter.com/?lang=ru" target="__blanc"><i class="fab fa-twitter footer_icon"></i></a>
+        <a href="https://www.instagram.com/gold_lepricon" target="__blanc"><i class="fab fa-instagram-square footer_icon"></i></a>
       </div>
     </div>
   </div>
@@ -180,6 +181,8 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/sliderMain.js"></script>
 <script src="./js/main.min.js"></script>
 </body>
 </html>

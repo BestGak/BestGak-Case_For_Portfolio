@@ -110,14 +110,14 @@
         <div class="connect__container">
           <div class="connect__container-left">
             <h2 class="connect__container-left-title">Свяжитесь со мной</h2>
-            <form id="send__form" action="">
+            <form id="send__form" action="" onsubmit="return false">
               <p class="connect__container-left-text">Имя</p>
               <input type="text" class="connect__container-left-input" required>
               <p class="connect__container-left-text">E-mail</p>
               <input type="text" class="connect__container-left-input" required>
               <p class="connect__container-left-text">Cообщение</p>
               <textarea class="connect__container-left-textarea" ></textarea>
-              <button class="default__btn">Отправить</button>
+              <button id="sendForm" class="default__btn">Отправить</button>
             </form>
           </div>
           <div class="connect__container-right">
@@ -202,9 +202,16 @@
       </div>
       </div>
     </footer>
-
+    <div class="overlay" id="overlay">
+      <div class="modal modal_mini" id="thanks">
+          <div class="modal__close">&times;</div>
+          <div class="modal__subtitle">Спасибо за вашу заявку</div>
+          <div class="modal__descr">Я свяжусь с Вами в ближайшее время</div>
+      </div>
+  </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="./js/modal.js"></script>r
 <script src="./js/main.min.js"></script>
 </body>
 </html>

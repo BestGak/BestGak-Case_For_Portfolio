@@ -1,9 +1,10 @@
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display = 'grid') => {
-  const header = document.querySelector(headerSelector),
+
+    let tabs = (headerSelector, tabSelector, contentSelector, activeClass, display = 'grid') => {
+        let header = document.querySelector(headerSelector),
         tab = document.querySelectorAll(tabSelector),
-        content = document.querySelectorAll(contentSelector);
-        
-  function hideTabContent() {
+        content = document.querySelectorAll(contentSelector);    
+
+        function hideTabContent() {
       content.forEach(item => {
           item.style.display = 'none';
       });
@@ -37,3 +38,5 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display
 };
 
 tabs('.tabs', '.tab', '.galery__container', 'active');
+
+// console.log(window.innerWidth);
