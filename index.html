@@ -25,16 +25,18 @@
     </div>
     <div class="menu">
       <nav>
+        <ul>
         <li><a href="./index.html">Главная</a></li>
         <li><a href="./about.html">О нас</a></li>
         <li><a href="./price.html">Услуги</a></li>
         <li><a href="./portfolio.html">Порфтолио</a></li>
         <li><a href="./contact.html">Контакты</a></li>
-       <a href="./contact.html"><button class="default__btn">Написать</button></a>
+      </ul>
+       <button class="default__btn"><a href="./contact.html">Написать</button></a>
         <div class="">
-          <a target="__blanc" href="https://www.facebook.com/"><i class="fab fa-facebook-f header__social"></i></a>
-          <a href="https://twitter.com/?lang=ru" target="__blanc"><i class="fab fa-twitter header__social"></i></a>
-          <a href="https://www.instagram.com/gold_lepricon/" target="__blanc"><i class="fab fa-instagram-square header__social"></i></a>
+          <a  href="https://www.facebook.com/" target="_blanc"><i class="fab fa-facebook-f header__social"></i></a>
+          <a href="https://twitter.com/?lang=ru" target="_blanc"><i class="fab fa-twitter header__social"></i></a>
+          <a href="https://www.instagram.com/gold_lepricon/" target="_blanc"><i class="fab fa-instagram-square header__social"></i></a>
         </div>
       </nav>
     </div>
@@ -51,14 +53,14 @@
         <option value="value2" selected>RU</option>
         <option value="value3">UKR</option>
       </select>
-      <ul>
-        <a href="./about.html"><li>Обо мне</li></a>
-        <a href="./portfolio.html"> <li>Портфолио</li></a>
-        <a href="./price.html"><li>Услуги</li></a>
-        <a href="./contact.html"><li>Контакты</li></a>
-         <a href="./faq.html"> <li>FAQ</li></a>
+      <ul class="header__ul">
+        <li><a class="header__link" href="./about.html">Обо мне</li></a>
+        <li><a class="header__link" href="./portfolio.html">Портфолио</li></a>
+        <li><a class="header__link" href="./price.html">Услуги</li></a>
+        <li><a class="header__link" href="./contact.html">Контакты</li></a>
+        <li><a class="header__link" href="./faq.html">FAQ</li></a>
         </ul>
-     <a href="./contact.html"><button class="header__btn default__btn">Написать</button></a>
+    <button class="header__btn default__btn"><a class="btnLink" href="./contact.html">Написать</button></a>
     </div>
   </div>
 </header>
@@ -81,7 +83,7 @@
           <h2 class="about__container-right-title">Обо мне</h2>
           <p class="about__container-right-description">Привет, меня зовут Арина и я хочу снять вашу фотоисторию. Историю, про настоящих вас. Где есть любовь, обьятия, улыбки! Ведь моменты забываются, а ваша история продолжается. Хочу сделать вам кадры, пересматривая которые, ваше сердце будет наполняться  теплом. 
           </p>
-         <a href="./about.html"><button class="about__right-btn default__btn">Читать больше</button></a> 
+        <button class="about__right-btn default__btn"> <a class="btnLink" href="./about.html">Читать больше</button></a> 
         </div>
       </div>
     </div>
@@ -91,14 +93,14 @@
     <div class="photossesion__container">
       <h2 class="photossesion__container-title">Фотосессии</h2>
       <div class="photossesion__container-grid" id="containerGrid">
-        <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid1.jpg" alt="firstImageGalery">
-        <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid2.jpg" alt="seconImageGalery">
-        <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid3.jpg" alt="thirdImageGalery">
-        <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid4.jpg" alt="fourImageGalery">
-        <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid5.jpg" alt="fiveImageGalery">
-        <img data-fancybox='galery' class="photossesion__container-grid-img" src="./images/firstGrid6.jpg" alt="sixImageGalery">
+        <img class="photossesion__container-grid-img" data-fancybox='galery'  src="./images/firstGrid1.jpg" alt="firstImageGalery">
+        <img class="photossesion__container-grid-img" data-fancybox='galery'  src="./images/firstGrid2.jpg" alt="seconImageGalery">
+        <img class="photossesion__container-grid-img" data-fancybox='galery'  src="./images/firstGrid3.jpg" alt="thirdImageGalery">
+        <img class="photossesion__container-grid-img" data-fancybox='galery'  src="./images/firstGrid4.jpg" alt="fourImageGalery">
+        <img class="photossesion__container-grid-img" data-fancybox='galery'  src="./images/firstGrid5.jpg" alt="fiveImageGalery">
+        <img class="photossesion__container-grid-img" data-fancybox='galery'  src="./images/firstGrid6.jpg" alt="sixImageGalery">
       </div>
-     <div class="photossesion__container-btn"><a href="./portfolio.html"><button class="photossesion__container-btn default__btn">Смотреть больше</button></a></div>
+     <div class="photossesion__container-btn"><button class="photossesion__container-btn default__btn"><a class="btnLink" href="./portfolio.html">Смотреть больше</button></a></div>
     </div>
   </section>
 
@@ -116,9 +118,9 @@
       <a href="tel:0632589730">0632589730</a>
       <a href="mailto:anriplh@gmail.com">anriplh@gmail.com</a>
       <div class="footer__container-contact-social">
-        <a target="__blanc" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/?lang=ru" target="__blanc"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/gold_lepricon" target="__blanc"><i class="fab fa-instagram-square"></i></a>
+        <a  href="https://www.facebook.com/" target="_blanc"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/?lang=ru" target="_blanc"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/gold_lepricon" target="_blanc"><i class="fab fa-instagram-square"></i></a>
       </div>
     </div>
     <div class="footer__mobile-links">
@@ -128,8 +130,8 @@
         <li><a href="./price.html">Услуги</a></li>
         <li><a href="./portfolio.html">Порфтолио</a></li>
         <li><a href="./contact.html">Контакты</a></li>
-    </div>
-  </ul>
+      </ul>
+      </div> 
     <p class="footer__copyright">© 2021 Арина Касаткина | All rights reserved</p>
   </div>
 
@@ -150,9 +152,9 @@
     <div class="footer__container-portfolio">
      <a href="./portfolio.html"><p class="footer__title">Портфолио</p></a>
       <ul>
-        <a href="./portfolio.html"><li>Семейные</li></a>
-        <a href="./portfolio.html"><li>Индивидуальные</li></a>
-        <a href="./portfolio.html"><li>Бекстейдж</li></a>
+        <li><a href="./portfolio.html">Семейные</li></a>
+        <li> <a href="./portfolio.html">Индивидуальные</li></a>
+        <li> <a href="./portfolio.html">Бекстейдж</li></a>
       </ul>
     </div>
 
@@ -171,9 +173,9 @@
      <a href="tel:0632589730">0632589730</a>
      <a href="mailto:anriplh@gmail.com">anriplh@gmail.com</a>
       <div class="footer__container-contact-social">
-        <a target="__blanc" href="https://www.facebook.com/"><i class="fab fa-facebook-f footer_icon"></i></a>
-        <a href="https://twitter.com/?lang=ru" target="__blanc"><i class="fab fa-twitter footer_icon"></i></a>
-        <a href="https://www.instagram.com/gold_lepricon" target="__blanc"><i class="fab fa-instagram-square footer_icon"></i></a>
+        <a  href="https://www.facebook.com/" target="_blanc"><i class="fab fa-facebook-f footer_icon"></i></a>
+        <a href="https://twitter.com/?lang=ru" target="_blanc"><i class="fab fa-twitter footer_icon"></i></a>
+        <a href="https://www.instagram.com/gold_lepricon" target="_blanc"><i class="fab fa-instagram-square footer_icon"></i></a>
       </div>
     </div>
   </div>

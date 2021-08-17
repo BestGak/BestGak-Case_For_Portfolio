@@ -1,0 +1,41 @@
+*{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+ 
+}
+body{
+  background-color: #FCF6F2;
+  min-width: 320px;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class],
+ul {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  list-style: none;
+}

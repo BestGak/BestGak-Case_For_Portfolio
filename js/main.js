@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   const questions = document.querySelectorAll('.faq__container-item');
+  const answers = document.querySelectorAll('faq__container-description')
   questions.forEach(quest => {
       quest.addEventListener('click', () => {
           quest.classList.toggle('faq__container-item--active');
           quest.nextElementSibling.classList.toggle('block');
       });
+  
   });
 });
 

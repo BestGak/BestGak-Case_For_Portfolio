@@ -1,43 +1,5 @@
-*{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  box-sizing: border-box;
- 
-}
-body{
-  background-color: #FCF6F2;
-  min-width: 320px;
-}
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-a{
-  text-decoration: none;
-  list-style: none;
-}
+@import './variables.scss';
+@import './reset.scss';
 
 .container{
   max-width: 1054px;
@@ -63,7 +25,7 @@ a{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: #93706C;
+	background-color: $main-color;
 	transition: all 0.5s;
 }
 
@@ -100,7 +62,7 @@ a{
       text-decoration: none;
       font-size: 18px;
       line-height: 32.4px;
-      color: #93706c;
+      color: $main-color;
     }
   }
 }
@@ -128,9 +90,7 @@ a{
 	top: 50%;
 	transform: translate(-50%, -50%) rotate(-45deg);
 }
-.block{
-  display: block !important;
-}
+
 .faq__container-item--active::after{
   transform: rotate(180deg);
 }
@@ -144,9 +104,10 @@ a{
   position: relative;
   &__title{
     text-align: center;
-    font-family: 'Playfair Display', serif;
+    
+    font-family: $title-font;
+    color: $main-color;
     font-weight: 700;
-    color: #93706c;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 0.32em;
@@ -191,66 +152,68 @@ a{
     justify-content: space-between;
     display: none;
     &-title{
-      font-family: 'Playfair Display', serif;
+      font-family: $title-font;
       font-weight: 700;
       font-size: 14px;
       line-height: 28.66px;
       letter-spacing: 0.33em;
-      color: #93706C;
+      color: $main-color;
     }
     & select{
       background-color: #FCF6F2;
       border: none;
-      color: #93706C;
+      color: $main-color;
       font-weight: 800;
-      font-size: 14px;
-      line-height: 16.44px;
+      @include title;
       cursor: pointer;
       outline: none;
     }
   }
+  &__link{
+    margin: 0px 22px;
+    color: $main-color;
+    @include title;
+  }
+  &__ul{
+      display: flex;
+      justify-content: space-between;
+    }
   &__container {
     display: flex;
     justify-content: space-between;
     & select{
       background-color: #FCF6F2;
       border: none;
-      color: #93706C;
+      color: $main-color;
       font-weight: 800;
-      font-size: 14px;
-      line-height: 16.44px;
+      @include title;
       cursor: pointer;
       outline: none;
-    }
-    & ul{
-      display: flex;
-      justify-content: space-between;
+    }  
       & li{
         list-style: none;
-        margin: 0px 22px;
-        color: #93706C;
-        font-size: 14px;
-        line-height: 16.44px;
+      
         cursor: pointer;
       }
-    }
   }
   &__social{
     font-size: 32px;
-    color: #93706C;
+    color: $main-color;
     z-index: 5;
     margin: 35px 33px 0px;
 
   }
 }
 
+.btnLink{
+  color: #fff;
+}
 .default__btn{
   width: 144px;
   height: 50px;
   background-color: #e18a7a;
   border-radius: 2px;
-  font-size: 14px;
-  line-height: 16.44px;
+  @include title;
   color: #FCF6F2;
   cursor: pointer;
   border:none ;
@@ -261,7 +224,7 @@ a{
 
   }
   &:hover{
-    box-shadow: 0px 3px 8px 0px #93706C80;
+    box-shadow: 0px 3px 8px 0px $main-color;
     background: #EE8363;
 
   }
@@ -281,7 +244,7 @@ a{
     padding-top: 80px;
     font-size: 64px;
     line-height: 102.4px;
-    color: #93706C;
+    color: $main-color;
     font-weight: 500;
     max-width: 751px;
     width: 100%;
@@ -289,14 +252,6 @@ a{
     align-items: center;
     background: transparent;
   }
-}
-
-
-.fa-circle{
-  font-size: 15px;
-  margin: 0 28px;
-  color: #E18A7A;
-  background: transparent;
 }
 
 .about {
@@ -310,9 +265,9 @@ a{
   &__container-right {
     margin-right: -10px;
     &-title{
-      font-family: 'Playfair Display', serif;
+      font-family: $title-font;
       font-weight: 700;
-      color: #93706C;
+      color: $main-color;
       font-size: 56px;
       line-height: 74,65px;
     }
@@ -320,7 +275,7 @@ a{
       font-weight: 500;
       font-size: 18px;
       line-height: 28.8px;
-      color: #93706C;
+      color: $main-color;
       max-width: 496px;
       width: 100%;
       padding: 64px 0px 80px;
@@ -347,11 +302,10 @@ a{
     margin: 211px 0px 91px;
     text-align: center;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42.66px;
-    color: #93706C;
-    border-top: 1px solid #93706C;
-    border-bottom: 1px solid #93706C;
+    @include classic-size;
+    color: $main-color;
+    border-top: 1px solid $main-color;
+    border-bottom: 1px solid $main-color;
   }
 
   &__container-grid {
@@ -406,7 +360,7 @@ a{
 }
 
 .footer {
-  background-color: #93706C;
+  background-color: $main-color;
   min-height: 300px;
   padding-top: 57px;
   & a{
@@ -419,12 +373,10 @@ a{
       list-style: none;
       padding: 0;
       & li{
-        font-size: 14px;
-        line-height: 16.44px;
+        @include title;
         color: #FCF6F2;
         margin: 12px 0px;
-        cursor: pointer;
-        
+        cursor: pointer;        
       }
     }
   }
@@ -432,7 +384,7 @@ a{
   &__container-logo {
     background-color: transparent;
     &-text{
-      font-family: 'Playfair Display', serif;
+      font-family: $title-font;
       font-weight: 700;
       font-size: 18px;
       line-height: 24px;
@@ -449,8 +401,7 @@ a{
 
   &__title {
     font-weight: 800;
-    font-size: 14px;
-    line-height: 16.44px;
+    @include title;
     color: #FCF6F2;
   }
 
@@ -459,8 +410,7 @@ a{
     display: flex;
     flex-direction: column;
     & a{
-      font-size: 14px;
-      line-height: 16.44px;
+      @include title;
       color: #FCF6F2;
       text-decoration: none;
       margin: 12px 0px;
@@ -519,13 +469,12 @@ a{
 
   &__container-title {
     text-align: center;
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42,66px;
-    border-top: 1px solid #93706C;
-    border-bottom: 1px solid #93706C;
-    color: #93706C;
+    @include classic-size;
+    border-top: 1px solid $main-color;
+    border-bottom: 1px solid $main-color;
+    color: $main-color;
   }
 
   &__container-img {
@@ -562,18 +511,20 @@ a{
       list-style: none;
       font-size: 24px;
       line-height: 28.17px;
-      color: #93706C;
+      color: $main-color;
       cursor: pointer;
       
     }
   }
 }
 
-.fa-circle {
+.circle{
   font-size: 8px;
   cursor: default;
+  margin: 0 28px;
+  color: #E18A7A;
+  background: transparent;
 }
-
 .galery {
 padding-top: 110px;
 padding-bottom: 300px;
@@ -604,9 +555,8 @@ padding-bottom: 300px;
       color: #FCF6F2;
       bottom: 5%;
       left: 5%;
-      font-size: 32px;
-      line-height: 42.66px;
-      font-family: 'Playfair Display', serif;
+      @include classic-size;
+      font-family: $title-font;
       opacity: 0;
       transition: all .6s;
       z-index: 5;
@@ -933,9 +883,9 @@ padding-bottom: 300px;
 }
 }
 
-.active{
+.tab.active{
   display: block;
-  color: #E18A7A !important;
+  color: #E18A7A;
 }
 
 .faded {
@@ -950,6 +900,11 @@ padding-bottom: 300px;
   to {
     opacity: 1;
   }
+}
+
+
+.overlay.block, .modal.block , .faq__container-description.block{
+  display: block;
 }
 
 .faq {
@@ -969,12 +924,12 @@ padding-bottom: 300px;
   }
 
   &__container-title {
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 700;
     max-width: 510px;
     font-size: 56px;
     line-height: 74.65px;
-    color: #93706C;
+    color: $main-color;
 
   }
 
@@ -983,7 +938,7 @@ padding-bottom: 300px;
     font-weight: 700;
     font-size: 18px;
     line-height: 28.8px;
-    color: #93706C;
+    color: $main-color;
     max-width: 670px;
     width: 100%;
     position: relative;
@@ -1014,11 +969,6 @@ padding-bottom: 300px;
   display: none;
 }
 
-.fa-chevron-down {
-  position: absolute;
-  left: calc(100% - 30px);
-  font-size: 25px;
-}
 
 .faq__container-description{
   cursor: default;
@@ -1026,7 +976,7 @@ padding-bottom: 300px;
   font-weight: 700;
   font-size: 18px;
   line-height: 28.8px;
-  color: #93706C;
+  color: $main-color;
   max-width: 570px;
   width: 100%;
 }
@@ -1043,11 +993,11 @@ padding-bottom: 300px;
 
   &__title {
     padding: 67px 0px 92px;
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 700;
     font-size: 56px;
     line-height: 74,65px;
-    color: #93706C;
+    color: $main-color;
   }
 
   &__container {
@@ -1059,7 +1009,7 @@ padding-bottom: 300px;
   &__container-block {
     max-width: 500px;
     width: 100%;
-    border: 1px solid #93706C;
+    border: 1px solid $main-color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1070,16 +1020,15 @@ padding-bottom: 300px;
   &__container-block-title {
     padding: 48px 0px;
     text-align: center;
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42,62px;
-    color: #93706C;
+    @include classic-size;
+    color: $main-color;
   }
 
   &__container-block-price {
     padding-bottom: 48px;
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 700;
     font-size: 48px;
     line-height: 64px;
@@ -1092,7 +1041,7 @@ padding-bottom: 300px;
     font-weight: 500;
     font-size: 18px;
     line-height: 28.8px;
-    color: #93706C;
+    color: $main-color;
     text-align: center;
 
   }
@@ -1121,7 +1070,7 @@ padding-bottom: 300px;
         color: #E18A7A;
         margin-bottom: 30px;
       & span{
-        color: #93706C;
+        color: $main-color;
         font-size: 18px;
         font-weight: 500;
         line-height: 29px;
@@ -1132,17 +1081,16 @@ padding-bottom: 300px;
   }
 
   &__container-right-title {
-    border-top: 1px solid #93706C;
+    border-top: 1px solid $main-color;
     max-width: 145px;
     width: 100%;
-    border-bottom: 1px solid #93706C;
+    border-bottom: 1px solid $main-color;
     margin-left: 32px;
     margin-bottom: 56px;
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42.66px;
-    color: #93706C;
+    @include classic-size;
+    color: $main-color;
   }
 }
 
@@ -1153,14 +1101,13 @@ padding-bottom: 300px;
   width: 100%;
 
   &__title {
-    border-top: 1px solid #93706C;
-    border-bottom: 1px solid #93706C;
+    border-top: 1px solid $main-color;
+    border-bottom: 1px solid $main-color;
     max-width: 390px;
     width: 100%;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42.66px;
-    color: #93706C;
+    @include classic-size;
+    color: $main-color;
   }
 
   &__container {
@@ -1186,7 +1133,7 @@ padding-bottom: 300px;
     font-weight: 500;
     font-size: 18px;
     line-height: 28.8px;
-    color: #93706C;
+    color: $main-color;
   }
 
   &__container-left-item-price {
@@ -1207,11 +1154,11 @@ padding-bottom: 300px;
   }
 
   &__container-right-title {
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 700;
     font-size: 56px;
     line-height: 74,65px;
-    color: #93706C;
+    color: $main-color;
     padding-bottom: 80px;
   }
 
@@ -1229,35 +1176,20 @@ padding-bottom: 300px;
       font-weight: 800;
       font-size: 18px;
       line-height: 28.8px;
-      color: #93706C;
+      color: $main-color;
       padding-bottom: 8px;
     }
     & a{
       font-size: 18px;
       font-weight: 500;
-      color: #93706C;
+      color: $main-color;
       text-decoration: none;
     }
   }
 }
 
-
-.fa-instagram {
-  color: #93706C;
-  font-size: 26px;
-}
-
-.fa-mobile {
-  color: #93706C;
-  font-size: 26px;
-}
-
-.fa-envelope {
-  color: #93706C;
-  font-size: 26px;
-}
-.fa-map-marker-alt {
-  color: #93706C;
+.contct__icon{
+  color: $main-color;
   font-size: 26px;
 }
 
@@ -1281,20 +1213,18 @@ padding-bottom: 300px;
   }
 
   &__container-left-title {
-    font-family: 'Playfair Display', serif;
+    font-family: $title-font;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42.66px;
-    color: #93706C;
-    border-top: 1px solid #93706C;
-    border-bottom: 1px solid #93706C;
+    @include classic-size;
+    color: $main-color;
+    border-top: 1px solid $main-color;
+    border-bottom: 1px solid $main-color;
     margin-bottom: 51px;
   }
 
   &__container-left-text {
-   font-size: 14px;
-   line-height: 16.44px;
-   color: #93706C; 
+    @include title;
+   color: $main-color; 
    padding-bottom: 11px;
   }
 
@@ -1302,7 +1232,7 @@ padding-bottom: 300px;
     outline: none;
     width: 500px;
     border-radius: 5px;
-    border: 1px solid #93706C;
+    border: 1px solid $main-color;
     background: none;
     height: 48px;
     margin-bottom: 20px;
@@ -1328,6 +1258,7 @@ padding-bottom: 300px;
 }
 
 .modal {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1367,9 +1298,6 @@ padding-bottom: 300px;
   label.error {
       border: none;
   }
-}
-#thanks {
-  display: none;
 }
 
 @import './media.scss';

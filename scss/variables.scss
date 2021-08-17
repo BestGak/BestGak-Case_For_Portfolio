@@ -1,0 +1,11 @@
+@mixin title {
+    line-height: 16px;
+    font-size: 14px;
+}
+@mixin classic-size{
+  font-size: 32px;    
+  line-height: 42.66px;
+}
+
+$main-color:#93706C;
+$title-font: 'Playfair Display', serif;
