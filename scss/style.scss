@@ -181,6 +181,7 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     & select{
       background-color: #FCF6F2;
       border: none;
